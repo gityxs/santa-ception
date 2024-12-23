@@ -1,0 +1,291 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Santa Game</title>
+<meta property="og:url" content="http://www.santaception.com/" />
+<meta property="og:title" content="SantaCeption" />
+<meta property="og:image" content="afbeeldingen/santaception.png" />
+<meta property="og:type" content="game" />
+<meta property="og:site_name" content="Santa game" />
+<meta property="fb:app_id" content="1510889245843134" />
+<meta property="fb:admins" content="624264403" />
+<meta property="og:description" content="Can you help santa making gifts for every person in the world? Oh that's right you only have 2 hours! do you got what it takes?" />
+<meta name="keywords" content="clicker,idle,incremental,game,free,cookie,rpg" />
+<link id="favicon" rel="shortcut icon" href="afbeeldingen/favicon.ico" />
+<link rel="stylesheet" type="text/css" href="style.css" />
+<script type="text/javascript" src="banners.js"></script>
+<script type="text/javascript" src="vars.js"></script>
+<script type="text/javascript" src="clicker.js"></script>
+<link rel="stylesheet" href="jquery-ui.css">
+<script src="jquery-1.10.2.js"></script>
+<script src="jquery-ui.js"></script>
+<script src="jquery.transit.js"></script>
+<script>
+$( document ).mousemove(function( event ) {
+  $( "#tooltip, #spawn" ).position({
+    my: "right-3 top+3",
+    of: event,
+    collision: "fit"
+  });
+});
+</script>
+<!-- <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-57157436-2', 'auto');
+  ga('require', 'displayfeatures');
+  ga('send', 'pageview');
+
+</script> -->
+</head>
+
+<body onload="init()">
+    <script src="chs.js"></script>
+    <script src="core.js"></script>
+<div id="loading">press ctrl+shift+r to refresh if the page does not load!</div>
+<div id="fb-root"></div>
+<!-- <script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '1510889245843134',
+      xfbml      : true,
+      version    : 'v2.2'
+    });
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script> -->
+<div id="alles">
+	<div id="links">
+    	<!-- <div id="socialMedia">
+			<script>
+				function fbShare(url, title, descr, image, winWidth, winHeight) {
+					var winTop = (screen.height / 2) - (winHeight / 2);
+					var winLeft = (screen.width / 2) - (winWidth / 2);
+					window.open('http://www.facebook.com/sharer.php?s=100&p[title]=' + title + '&p[summary]=' + descr + '&p[url]=' + url + '&p[images][0]=' + image, 'sharer', 'top=' + winTop + ',left=' + winLeft + ',toolbar=0,status=0,width=' + winWidth + ',height=' + winHeight);
+				}
+			</script>
+			<a id="fb_share" href="javascript:fbShare('http://www.santaception.com', 'Fb Share', 'Facebook share popup', 'http://goo.gl/dS52U', 520, 350)"><img src="http://santaception.com/afbeeldingen/facebookshare.png" /></a><br />
+			<a href="https://twitter.com/share" class="twitter-share-button" data-text="Awesome Christmas game! You have 2 hours to supply the whole world with gifts ;) Do you got what it takes?" data-size="large" data-count="none">Tweet</a>
+			<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+			<div class="fb-like" data-layout="button" data-action="like" data-show-faces="true" data-share="false"></div>
+		</div> -->
+		<div id="linkseKnoppen" class="">
+            <div id="menuknop" class="linkseKnop" onclick="toggleMenuWrapper()"><p>menu</p></div>
+        </div>
+<!--        <div id="add"></div>
+        <div id="donate">
+        	<br />Enjoying our game?<br />Consider supporting us so we can keep working on it<br />
+            <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+            <input type="hidden" name="cmd" value="_s-xclick">
+            <input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----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-----END PKCS7-----
+            ">
+            <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+            <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+            </form>
+            Thanks!<br />
+		</div>-->
+        
+	</div>
+	<div id="center">
+    	<div id="achtergrond_voor">
+            <div id="waargeopklikt" onclick="klik()" onmousedown="klikkerChange()" onmouseup="klikkerRestore()"><div id="toyMachine"></div></div>
+            <div id="verpakkerBack"></div>
+            <div id="verpakker"></div>
+            <div id="duplicatorBack"></div>
+            <div id="duplicator"></div>
+            <div id="warper"></div>
+            <div id="band1"></div>
+            <div id="band2"></div>
+            <div id="band2b"></div>
+            <div id="band3" class="band200"></div>
+            <div id="band4" class="band200"></div>
+            <div id="band5" class="band200"></div>
+            <div id="band6" class="band200"></div>
+            <div id="band7" class="band200"></div>
+            <div id="krant" onclick="openKrant()"></div>
+            <div id="radio" onclick="music()"><audio id="music"><source src="radio/music.mp3" type="audio/mpeg"></audio></div>
+            <div id="cadeaus"></div>
+        </div>
+	</div>
+	<div id="centerUI">
+        <div id="links_border"></div>
+        <div id="rechts_border"></div>
+        <div id="voorraad"><p id="total"></p><p id="rpsTotal"></p><p id="time"></p></div>
+        <div id="notificaties"></div>
+        <div id="krantOpen">
+        	<img src="afbeeldingen/verhaaltje/santapaper.png" alt="gazet" style="height:100%" />
+            <div id="wakeUpKnop" onclick="wakeUpCall()"></div>
+            <div id="sluitKrantKnop" onclick="sluitKrant()"></div>
+        </div>
+        <div id="menuWrapper">
+            <div id="menuLinkBar" class="stroke"><span onclick="showMenu()" id="menuLink">menu</span><span onclick="showStats()" id="statsLink">stats</span><span onclick="showAchievs()" id="achievsLink">achievements</span><span onclick="showInfo()" id="infoLink">info</span></div>
+            <div class="closeButton" onclick="toggleMenuWrapper()"></div>
+            <div id="menu">
+                <div id="gameOptions" class="stroke">
+                    <div id="save"><span>save</span></div><br />
+                    <div id="export">
+                    	<span id="exportknop" onclick="exporteer()">export</span>
+                        <textarea rows="1" cols="40"></textarea>
+                    </div><br />
+                    <div id="import">
+                        <span id="importknop" onclick="importGame()">import</span>
+                        <textarea rows="1" cols="40"></textarea>
+                    </div><br />
+                    <div id="reset" onclick="resetGame()"><span>reset<span></div>
+                </div><br />
+                <div id="visualOptions">
+                    <table><tr>
+                    	<td>animations:</td>
+                        <td><div id="animationSetting" class="onOff"><div class="onOffSchakel"></div></div></td>
+                    </tr></table>
+                </div>
+            </div>
+            <div id="stats">
+                <table>
+                	<tr><td>Gifts in storage</td><td id="statsResource"></td></tr>
+                	<tr id="statsResourceMade"><td class="statText">Gifts made</td><td class="statTD"></td></tr>
+                	<tr><td>Clicks</td><td id="statsKliks"></td></tr>
+                	<tr><td>Gifts per click</td><td id="statsPerKlik"></td></tr>
+                	<tr><td>Gifts made by clicks</td><td id="statsResourceByKliks"></td></tr>
+                	<tr><td>Golden gift clicks</td><td id="statsSpecialKliks"></td></tr>
+                	<tr id="dream"><td>Dreams</td><td class="statTD"></td></tr>
+                	<tr><td>Items</td><td id="statsItems"></td></tr>
+                	<tr><td>Upgrades</td><td id="statsUpgrades"></td></tr>
+                	<tr><td>Achievements</td><td id="statsAchievements"></td></tr>
+                	<tr id="giftsLost"><td>Gifts lost in dreams</td><td class="statTD"></td></tr>
+                	<tr id="clicksLost"><td>Clicks lost in dreams</td><td class="statTD"></td></tr>
+                	<tr id="santasperience"><td>Santasperience</td><td class="statTD"></td></tr>
+                	<tr id="activeSantasperience"><td>Active Santasperience</td><td class="statTD"></td></tr>
+                </table>
+                <div class="stroke">Active Upgrades</div>
+                <div id="activeUpgrades"></div>
+            </div>
+            <div id="achievs">
+                <div id="achievList"></div>
+            </div>
+            <div id="info">
+            	Thanks for playing!<br /><br />
+
+				Have something to say? Good or Bad it doesn't matter!<br /><br />
+
+				Contact us on reddit or email<br /><br />
+
+				Reddit username: FloriLou<br /><br />
+				Email: contact[[at]]santaception.com<br /><br />
+                
+                &copy; FloriLou Games 2014<br />
+                
+               <br /> v 1.008<br />
+               -Fixed the golden gift bug<br />
+               -Fixed some typo's<br />
+                
+               <br /> v 1.007<br />
+               -The radio really works now<br  />
+               -Enabled soft reset before midnight<br />
+               -Edited prices for 100 &amp; 200 items upgrades<br />
+               -All clickable items should have pointer as cursor now<br />
+               -Introduced facebook like bonus (you might have to re-like if you liked already)<br />
+               -A few new achievement icons<br />
+               -Redesigned tutorials a bit<br />
+               -Loading screen<br /> 
+               -Once again a few bugs are fixed<br />
+                
+               <br /> v 1.006<br />
+               -Some new stuff!<br  />
+               -Music<br />
+               -Changed clicking so its more balanced<br />
+               -Fixed some small bugs <br />
+               
+               <br /> v 1.005<br />
+               -New achievements and upgrades!<br />
+                
+               <br /> v 1.004<br />
+               -Each achievement now boost your gifts per second by 1%<br />
+               -Santasperience changed, easier to get at the start, harder at the end<br />
+               -Unlocking Santasperience is cheaper now<br />
+               -Fixed some UI problems<br />
+               -Solved some css and java problems<br />
+               
+               <br /> v 1.003<br />
+                -Added scaling to the central game area<br />
+                -It should be easier to click on golden gifts now<br />
+                -You can now push ctrl to buy 10 items at once<br />
+                -Tooltips now update instantly when you buy an item<br />
+                -Robots are fully functional<br />
+                -Some small css and java issues are solved<br />
+                
+                <br />v 1.002<br />
+                -Extra robot animations<br />
+                -Scrollbar in menu if needed<br />
+                -Added small santasperience tutorial<br />
+                -Altered some css<br />
+                -Fixed some minor bugs<br />
+                
+                <br />v 1.001<br />
+                -First upgrades for each item are cheaper<br />
+                -Redesigned clicking upgrades<br />
+                -Added small tutorial<br />
+                -Edited some texts
+            </div>
+		</div>
+        <div id="wheelOfFortune">
+            <img id="wheel" src="afbeeldingen/wheel.png"/>
+            <img id="wijzer" src="afbeeldingen/wijzer.png"/>
+            <div id="youWon">
+                <div id="winIcon"></div>
+                <div id="winText"></div>
+                <div id="getWin"></div>
+            </div>
+        </div>
+	</div>
+	<div id="rechts">
+		<div id="upgrades" class="upgradesNoHover" onmouseover="setUpgradesHover()" onmouseout="setUpgradesNoHover()"></div>
+		<div id="items"></div>
+	</div>
+    <div id="santaHome">
+		<div id="santaBed"></div>
+        <div id="santaFace"></div>
+        <div id="santaLaken"></div>
+        <div id="santaFaceKlik" onclick="slapSanta()"></div>
+        <div id="elfke"></div>
+        <div id="elfCloud"></div>
+        <div id="santaDreamBallon"></div>
+        <div id="elfTekstBallon"></div>
+    	<div id="story" class="stroke">On a very cold winter evening...</div>
+	</div>
+    <div id="sleep"></div>
+</div>
+<div id="spawn"></div>
+<div id="tooltip">
+    <div id="tooltipNaam" class="stroke"></div>
+    <div id="tooltipInfo"></div>
+    <div id="tooltipExtra"></div>
+    <div id="tooltipPrijs"></div>
+</div>
+<!--客服 开始-->
+<script src="//g8hh.github.io/static/js/jquery.min.js"></script>
+<link rel="stylesheet" href="//g8hh.github.io/static/css/kf.css" type="text/css" media="screen" charset="utf-8">
+<script src="//g8hh.github.io/static/js/kf.js"></script>
+<!-- 客服 结束 -->
+<!--站长统计-->
+    <div style="display: none">
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?828597e93cee632465679b7ef35edfd5";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>    </div>
+</body></html>

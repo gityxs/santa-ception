@@ -1,0 +1,1369 @@
+div#donate{
+	text-align: center;
+	color: white;
+	font-size: 18px;
+}
+
+div#socialMedia{
+	margin-top:5px;
+}
+
+p.tutRight {
+	margin-right: 75px;
+	margin-top: 21px;
+	margin-left: 14px;
+}
+
+p.tutLeft {
+	margin-left: 80px;
+	margin-top: 20px;
+	margin-right: 10px;
+}
+
+div#alienTextballon{
+	background-image:url(afbeeldingen/verhaaltje/tekstbubble.png);
+	background-size:100% 100%;
+	position:absolute;
+	top:400px;
+	left:650px;
+	height:185px;
+	width:462px;
+	z-index:99;
+	font-size:20px;
+	padding:10px;
+}
+
+div#alienGotIt {
+	width:92px;
+	height:28px;
+	position:absolute;
+	left:190px;
+	top:120px;
+	background-size:100% 100%;
+	background-image:url(afbeeldingen/verhaaltje/gotitbutton.png);
+	pointer-events:auto;
+	cursor:pointer;
+}
+
+div#alien1{
+	background-image:url(afbeeldingen/verhaaltje/alien4.png)
+}
+
+div#alien2{
+	background-image:url(afbeeldingen/verhaaltje/alien2.png)
+}
+
+div#alien3{
+	background-image:url(afbeeldingen/verhaaltje/alien3.png)
+}
+
+div#alien4{
+	background-image:url(afbeeldingen/verhaaltje/alien1.png)
+}
+
+div#alien5{
+	background-image:url(afbeeldingen/verhaaltje/alien5.png)
+}
+
+div.alien{
+	background-size:100% 100%;
+	position:absolute;
+	height:217px;
+	width:165px;
+	left:838px;
+	top:462px;
+	opacity:0;
+	z-index:99;
+}
+
+div#alienVortex {
+	background-size:100% 100%;
+	position:absolute;
+	left:900px;
+	top:545px;
+	height:50px;
+	width:50px;
+	background-image:url(afbeeldingen/verhaaltje/Vortex.png);
+	pointer-events:auto;
+	cursor:pointer;
+}
+
+.rotate{
+	-webkit-animation-name: rotateThis;
+	-webkit-animation-duration:2s;
+	-webkit-animation-iteration-count:infinite;
+	-webkit-animation-timing-function:linear;
+	-moz-animation-name: rotateThis;
+	-moz-animation-duration:2s;
+	-moz-animation-iteration-count:infinite;
+	-moz-animation-timing-function:linear;
+	animation-name: rotateThis;
+	animation-duration: 2s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+}
+
+@-webkit-keyframes rotateThis {
+	from {-webkit-transform:rotate(0deg);}
+	to {-webkit-transform:rotate(360deg);}
+}
+
+@-moz-keyframes rotateThis {
+	from {-moz-transform:rotate(0deg);}
+	to {-moz-transform:rotate(360deg);}
+}
+
+@keyframes rotateThis {
+  from {transform:rotate(0deg);}
+  to {transform:rotate(360deg);}
+}
+
+div#krant{
+	left:800px;
+	top:450px;
+	position:absolute;
+	width:120px;
+	height:180px;
+	display:none;
+	pointer-events:auto;
+	z-index:60;
+	cursor:pointer;
+	background-image:url(afbeeldingen/verhaaltje/santapaper.png);
+	background-size:100% 100%;
+}
+
+div#radio {
+	pointer-events:auto;
+	background-image:url(radio/radio2.png);
+	background-size:100% 100%;
+	width:111px;
+	height:83px;
+	position:absolute;
+	left:1225px;
+	top:525px;
+	cursor:pointer;
+}
+
+div#krantOpen {
+	position:absolute;
+	display:none;
+	height:100%;
+}
+
+#fb_share {
+	margin-left:5px;
+}
+
+.fb_iframe_widget {
+	vertical-align:top;
+	transform:scale(1.5,1.5);
+	left:10px;
+	top:4px;
+	pointer-events:auto;
+}
+
+iframe#twitter-widget-0{
+	margin-left:16px;
+}
+
+div#tutorial {
+	width:300px;
+	height:120px;
+	position:absolute;
+	z-index:100;
+}
+
+div#gotIt {
+	width:92px;
+	height:28px;
+	position:absolute;
+	left:104px;
+	top:106px;
+	background-size:100% 100%;
+	background-image:url(afbeeldingen/verhaaltje/gotitbutton.png);
+	pointer-events:auto;
+}
+
+div#wakeUpKnop{
+	position:absolute;
+	background-image:url(afbeeldingen/verhaaltje/wakeup.png);
+	bottom:8%;
+	margin:auto;
+	left:0;
+	right:0;
+	height:28px;
+	width:92px;
+	display:none;
+	z-index:60;
+	cursor:pointer;
+	pointer-events:auto;
+}
+
+div#sluitKrantKnop{
+	position:absolute;
+	right:7%;
+	top:10%;
+	height:25px;
+	width:25px;
+	display:none;
+	background-size:100% 100%;
+	background-image:url(afbeeldingen/verhaaltje/closebutton.png);
+	cursor:pointer;
+	pointer-events:auto;
+}
+
+div#santaHome, div#sleep {
+	visibility:none;
+	margin:0px;
+	position:absolute;
+	background-color:white;
+	left:0;
+	right:0;
+	top:0;
+	bottom:0;
+	z-index:100;
+}
+
+div#santaHome{
+	pointer-events:auto;
+}
+	
+div#sleep {
+	pointer-events:none;
+}
+		
+
+div#santaHome {
+	background-image:url(afbeeldingen/verhaaltje/background.jpg);
+	background-size:100% 100%;
+}
+
+div#santaBed {
+	background-image:url(afbeeldingen/verhaaltje/badachterlayer.png);
+	background-size:100% 100%;
+	width:533px;
+	height:350px;
+	position:absolute;
+	bottom:50px;
+	left:100px;
+}
+
+div#santaFace {
+	background-image:url(afbeeldingen/verhaaltje/santaface.png);
+	background-size:100% 100%;
+	width:533px;
+	height:350px;
+	position:absolute;
+	bottom:50px;
+	left:100px;
+}
+
+div#santaFaceKlik {
+	height:140px;
+	width:140px;
+	position:absolute;
+	left:225px;
+	bottom:250px;
+	opacity:0.2;
+	display:none;
+	cursor:pointer;
+	pointer-events:auto;
+}
+
+div#santaLaken {
+	background-image:url(afbeeldingen/verhaaltje/voorlayer.png);
+	background-size:100% 100%;
+	width:533px;
+	height:350px;
+	position:absolute;
+	bottom:50px;
+	left:100px;
+	pointer-events:none;
+}
+
+div#santaDreamBallon {
+	background-image:url(afbeeldingen/verhaaltje/dreamballonsanta.png);
+	background-size:100% 100%;
+	width:457px;
+	height:364px;
+	position:absolute;
+	bottom:350px;
+	left:225px;
+}
+
+div#elfke {
+	background-image:url(afbeeldingen/verhaaltje/poof.png);
+	background-size:100% 100%;
+	width:400px;
+	height:400px;
+	position:absolute;
+	bottom:100px;
+	left:600px;
+	display:none;
+	z-index:1;
+}
+
+div#elfCloud {
+	background-image:url(afbeeldingen/verhaaltje/white.png);
+	background-size:100% 100%;
+	width:400px;
+	height:400px;
+	position:absolute;
+	bottom:100px;
+	left:600px;
+	opacity:0;
+}
+
+div#elfTekstBallon {
+	background-image:url(afbeeldingen/verhaaltje/santascream.png);
+	background-size:100% 100%;
+	width:255px;
+	height:215px;
+	position:absolute;
+	bottom:400px;
+	left:850px;
+	display:none;
+}
+
+div#story {
+	position:relative;
+	font-size:36px;
+	margin:2px;
+	left:0px;
+	right:0px;
+	bottom:0px;
+	text-align:center;
+}
+
+div#wakeUp {
+	background-image:url(afbeeldingen/verhaaltje/santascream.png);
+	background-size:100% 100%;
+	width:255px;
+	height:215px;
+	position:absolute;
+	opacity:0;
+	pointer-events:auto;
+	cursor:pointer;
+	z-index:100;
+}
+
+p#time{
+	margin: 0;
+	top: 81px;
+	position: absolute;
+	left: 35px;
+	right: 35px;
+	font-size: 20px;
+	font-weight: bold;
+	text-align: center;
+}
+
+div.elf{
+	background-image:url(afbeeldingen/elf.gif);
+	width:65px;
+	height:65px;
+	background-size:100% 100%;
+	position:absolute;
+	z-index:-1;
+}
+
+div.clark{
+	background-image:url(afbeeldingen/robots/clark.png);
+	background-size:100% 100%;
+	width:150px;
+	height:150px;
+	position:absolute;
+}
+
+div.robot{
+	background-size:100% 100%;
+	width:100px;
+	height:100px;
+	position:absolute;
+}
+
+div#goldenGift{
+	width:50px;
+	height:50px;
+	position:absolute;
+	background-image:url(afbeeldingen/gifts/goldengift.png);
+	background-size:100% 100%;
+	z-index:51;
+	cursor:pointer;
+	pointer-events:auto;
+}
+
+div#cadeaus {
+	position:absolute;
+	left:0;
+	top:619px;
+	background-image:url(afbeeldingen/factory/cadeaus.png);
+	background-size:100% 100%;
+	height:500px;
+	width:400px;
+	z-index:52;
+}
+
+div.thief {
+	background-image:url(afbeeldingen/factory/thief.png);
+	background-size:100% 100%;
+	position:absolute;
+	width:120px;
+	height:120px;
+}
+
+div.package {
+	background-image:url(afbeeldingen/factory/bag.png);
+	background-size:100% 100%;
+	position:absolute;
+	width:50px;
+	height:50px;
+}
+
+div#add{
+	position:relative;
+	height:600px;
+}
+
+div#add a img {
+	margin-left:auto;
+	margin-right:auto;
+	left:0;
+	right:0;
+	position:absolute;
+}
+
+div#band1{
+	background-image:url(afbeeldingen/factory/band700.png);
+	background-size:100% 100%;
+	position:absolute;
+	width:700px;
+	height:35px;
+	top:250px;
+	left:50px;
+	display:none;
+}
+
+div#band2{
+	background-image:url(afbeeldingen/factory/band700.png);
+	background-size:100% 100%;
+	position:absolute;
+	width:700px;
+	height:35px;
+	top:380px;
+	left:200px;
+	display:none;
+}
+
+div#band2b{
+	background-image:url(afbeeldingen/factory/band550.png);
+	background-size:100% 100%;
+	position:absolute;
+	width:550px;
+	height:35px;
+	top:380px;
+	left:200px;
+	display:none;
+}
+
+div.band200{
+	background-image:url(afbeeldingen/factory/band200.png);
+	background-size:100% 100%;
+	position:absolute;
+	width:200px;
+	height:35px;
+	display:none;
+}
+
+div#band3{
+	top:380px;
+	left:550px;
+	display:none;
+}
+
+div#band4{
+	top:380px;
+	left:200px;
+	display:none;
+}
+
+div#band5{
+	top:470px;
+	left:200px;
+	display:none;
+}
+
+div#band6{
+	top:590px;
+	left:200px;
+	display:none;
+}
+
+div#band7{
+	top:340px;
+	left:900px;
+	display:none;
+}
+
+div#warper{
+	background-image:url(afbeeldingen/factory/warper.png);
+	background-size:100% 100%;
+	position:absolute;
+	top:470px;
+	left:400px;
+	width:200px;
+	height:135px;
+	z-index:52;
+	display:none;
+}
+	
+
+div#verpakker{
+	background-image:url(afbeeldingen/factory/verpakker.png);
+	background-size:100% 100%;
+	position:absolute;
+	top:175px;
+	left:740px;
+	width:165px;
+	height:250px;
+	z-index:52;
+	display:none;
+}
+
+div#verpakkerBack{
+	background-image:url(afbeeldingen/factory/verpakker_back.png);
+	background-size:100% 100%;
+	position:absolute;
+	top:175px;
+	left:740px;
+	width:165px;
+	height:250px;
+	display:none;
+}
+
+div#duplicator{
+	background-image:url(afbeeldingen/factory/duplicator.png);
+	background-size:100% 100%;
+	position:absolute;
+	top:300px;
+	left:400px;
+	width:150px;
+	height:190px;
+	z-index:52;
+	display:none;
+}
+
+div#duplicatorBack{
+	background-image:url(afbeeldingen/factory/duplicator_back.png);
+	background-size:100% 100%;
+	position:absolute;
+	top:300px;
+	left:400px;
+	width:150px;
+	height:190px;
+	display:none;
+}
+
+body {
+	margin:0;
+	padding:0;
+	min-width:1360px;
+	height:100%;
+	font-family:Tahoma, Geneva, sans-serif;
+	-moz-user-select: -moz-none;
+	-khtml-user-select: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	background-image:url(afbeeldingen/loading.gif);
+	background-size:675px 675px;
+	background-position:center;
+	background-repeat:no-repeat;
+}
+
+div#loading{
+	height:100%;
+}
+
+html, body {
+	height:100%;
+}
+
+div.toyMachines {
+	background-image:url(afbeeldingen/factory/toymachine_base.png);
+	background-position:top center;
+	background-size:100% 50%;
+	background-repeat:no-repeat;
+	margin:0 auto;
+	width:100px;
+	height:75px;
+	position:absolute;
+	top:0px;
+}
+
+div.toyMachines .dropper {
+	background-image:url(afbeeldingen/factory/toymachine_bottom.png);
+	background-repeat:no-repeat;
+	background-size:100% 100%;
+	width:75px;
+	height:25px;
+	position:absolute;
+	left:0;
+	right:0;
+	top:37px;
+	margin:auto;
+}
+
+div#onderKlikker {
+	position:absolute;
+	top:520px;
+	min-height:1px;
+	left:0;
+	right:0;
+	bottom:0;
+}
+
+#bunnyWrap{
+	position:absolute;
+	z-index:50;
+}
+
+#bunny{
+	background-size:cover;
+	height:50px;
+	width:60px;
+	z-index:50;
+	pointer-events:auto;
+}
+
+.zwartWit {
+	-webkit-filter: grayscale(100%);
+	-moz-filter: grayscale(100%);
+	-ms-filter: grayscale(100%);
+	-o-filter: grayscale(100%);
+	filter: grayscale(100%);
+	filter: url(#grayscale); /* Firefox 4+ */
+	filter: gray; /* IE 6-9 */
+}
+
+div.onOff {
+	width:70px;
+	height:30px;
+	background-color:green;
+	border-radius:15px;
+	position:relative;
+}
+
+div.onOff div {
+	width:30px;
+	height:30px;
+	border-radius:15px;
+	background-color:white;
+	position:absolute;
+	left:40px;
+}
+
+.stroke {
+	color:white;
+	font-weight:bold;
+	text-shadow:
+       1px 1px #000,
+     -1px -1px #000,
+      1px -1px #000,
+      -1px 1px #000;
+}
+
+.stroke p:hover {
+	color:white;
+	font-weight:bold;
+	text-shadow:
+       1px 1px #BBB,
+     -1px -1px #BBB,  
+      1px -1px #BBB,
+      -1px 1px #BBB;
+}
+
+div.closeButton {
+	background-image:url(afbeeldingen/closeButton.png);
+	background-size:cover;
+	background-repeat:no-repeat;
+	height:40px;
+	width:40px;
+	right:0;
+	top:0;
+	position:absolute;
+	cursor:pointer;
+	z-index:1;
+}
+
+div#menu span {
+	cursor:pointer;
+}
+
+div#wheelOfFortune{
+	margin:100px auto 0px;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	position:absolute;
+	width:700px;
+	height:700px;
+	z-index:60;
+	display:none;
+	pointer-events:auto;
+	cursor:pointer;
+}
+
+div#menuWrapper {
+	margin:auto;
+	background-image:url(afbeeldingen/menu_background.png);
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	position:absolute;
+	width:660px;
+	height:540px;
+	background-repeat:no-repeat;
+	background-size:100% 100%;
+	z-index:50;
+	display:none;
+	color:white;
+	pointer-events:auto;
+}
+
+div#menuLinkBar {
+	left:0;
+	top:-20px;
+	right:0;
+	margin:0 auto;
+	height:30px;
+	width:500px;
+	color:white;
+	position:absolute;
+}
+
+div#menuLinkBar span {
+	height:30px;
+	display:inline-block;
+	width:125px;
+	text-align:center;
+	font-size:18px;
+	position:relative;
+	top:10px;
+	cursor:pointer;
+}
+
+span.activeMenu{
+	background-color: rgb(165, 0, 4);
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+}
+
+div#menu, div#stats, div#achievs, div#info{
+	margin:30px 20px 0px 20px;
+	position:relative;
+	display:none;
+	pointer-events:auto;
+	padding:0 0 0 30px;
+	height:475px;
+	overflow:auto;
+}
+
+div#info{
+	text-align:center;
+}
+
+img#wijzer{
+	position:absolute;
+	top:-50px;
+	left:320px;
+	height:100px;
+	z-index:61;
+	pointer-events:none;
+}
+
+div#darken {
+	position:fixed;
+	top:0;
+	left:0;
+	right:0;
+	bottom:0;
+	background-color:black;
+	opacity:0.8;
+	z-index:59;
+}
+
+div#youWon {
+	position:absolute;
+	top:200px;
+	left:100px;
+	right:100px;
+	background-image:url(afbeeldingen/you_won.png);
+	background-size:contain;
+	background-repeat:no-repeat;
+	bottom:0;
+	display:none;
+}
+
+div#winIcon {
+	width:174px;
+	height:174px;
+	position:absolute;
+	top:100px;
+	left:30px;
+	background-size:contain;
+}
+
+div#winText {
+	position:absolute;
+	left:220px;
+	top:120px;
+	margin:10px;
+	width:280px;
+	color:white;
+	font-size:16px;
+}
+
+div#getWin {
+	background-image:url(afbeeldingen/get_win.png);
+	background-size:cover;
+	width:142px;
+	height:47px;
+	top:280px;
+	left:200px;
+	position:absolute;
+	pointer-events:auto;
+}
+
+div#share {
+	background-image:url(afbeeldingen/sharebuttons.png);
+	background-repeat:no-repeat;
+	background-size:cover;
+	width:180px;
+	height:85px;
+}
+
+div#linkseKnoppen {
+	width:180px;
+	cursor:pointer;
+}
+
+div#linkseKnoppen p {
+	padding-top:5px;
+	margin:0px;
+	text-align:center;
+	font-size:20px;
+	vertical-align:central;
+}
+
+div.linkseKnop {
+	background-image:url(afbeeldingen/menuknop.png);
+	background-repeat:no-repeat;
+	background-size:100% 100%;
+	width:150px;
+	height:40px;
+	margin:5px auto 5px;
+	color:#AB0005;
+	font-weight:bold;
+}
+
+div.linkseKnop p:hover {
+	text-shadow:
+       1px 1px #FF5959,
+     -1px -1px #FF5959,  
+      1px -1px #FF5959,
+      -1px 1px #FF5959;
+}
+	
+
+div#addLinks {
+	background-image:url(afbeeldingen/addje.png);
+	background-repeat:no-repeat;
+	background-size:cover;
+	height:600px;
+	width:160px;
+	margin:0px auto;
+}
+
+div.animation {
+	background-repeat:no-repeat;
+	background-size:cover;
+	position:absolute;
+	z-index:29;
+}
+
+div.wolkje {
+	background-image:url(afbeeldingen/wolkje.png);
+	background-repeat:no-repeat;
+	background-size:cover;
+	position:absolute;
+	opacity:.9;
+	z-index:10;
+}
+
+div#zonneke {
+	height:72px;
+	width:72px;
+	position:absolute;
+	background-image:url(afbeeldingen/zonneke.png);
+	background-size:contain;
+	background-repeat:no-repeat;
+	top:10px;
+	right:100px;
+	z-index:5;
+}
+
+div#zonnekeHover {
+	height:72px;
+	width:72px;
+	position:absolute;
+	opacity:0;
+	top:10px;
+	right:100px;
+	z-index:100;
+}
+
+div.notificatieSluiten {
+	height:15px;
+	width:15px;
+	background-image:url(afbeeldingen/close.png);
+	background-size:contain;
+	background-repeat:no-repeat;
+	position:absolute;
+	right:1px;
+	top:1px;
+	opacity:0.7;
+	pointer-events:auto;
+}
+
+div.notificatieHoofd {
+	min-height:50px;
+}
+
+div.notificatieText{
+	position: relative;
+	max-width: 300px;
+}
+
+div.notificatieTitel{
+	position: relative;
+	left: 55px;
+	max-width: 250px;
+	margin-right: 50px;
+	font-size: 24px;
+	border-bottom: 2px;
+	border-bottom-style: solid;
+	border-color: black;
+}
+
+div.notificatieIcon{
+	width: 50px;
+	height: 50px;
+	background-repeat: no-repeat;
+	background-size: contain;
+	position: absolute;
+}
+
+div.notificatie {
+	border: 4px;
+	border-color: #b87e4a;
+	border-style: solid;
+	min-width: 200px;
+	background-color: #deba73;
+	padding: 5px 10px 5px 5px;
+	margin-top:5px;
+	position:relative;
+}
+
+div#notificaties{
+	position: absolute;
+	right: 50px;
+	bottom: 0px;
+	z-index: 50;
+}
+
+div#spawn {
+	position:absolute;
+	-moz-user-select: -moz-none;
+	-khtml-user-select: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	pointer-events:none;
+}
+
+div.klikIcon {
+	height:50px;
+	width:50px;
+	background-repeat:no-repeat;
+	background-size:contain;
+	position:absolute;
+	-moz-user-select: -moz-none;
+	-khtml-user-select: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	pointer-events:none;
+	opacity:1;
+	z-index:50;
+}
+
+div.klikTxt {
+	position:absolute;
+	-moz-user-select: -moz-none;
+	-khtml-user-select: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	pointer-events:none;
+	opacity:1;
+	z-index:40;
+	font-weight:bold;
+	font-size:18px;
+	color:white;
+}
+
+div#tooltip {
+	position:absolute;
+	display:none;
+	border:4px;
+	border-color:#b87e4a;
+	border-style:solid;
+	min-height:100px;
+	min-width:200px;
+	background-color:#deba73;
+	padding:5px 10px 5px 5px;
+	z-index:60;
+	pointer-events:none;
+}
+
+div#tooltipNaam {
+	font-size:24px;
+	border-bottom: 2px;
+	border-bottom-style: solid;
+	border-color:black;
+}
+
+div#tooltipExtra {
+	text-align: right;
+	font-style: italic;
+}
+
+div.upgrade, div.achievementKader{
+	height:50px;
+	width:50px;
+	background-image:url(afbeeldingen/kaderke.png);
+	background-repeat:no-repeat;
+	background-size:contain;
+	display:inline-block;
+	margin:1px 1px 1px 1px;
+}
+
+div#upgrades .upgrade{
+	cursor:pointer;
+}
+
+div.achievement{
+	height:46px;
+	width:46px;
+	background-repeat:no-repeat;
+	background-size:100% 100%;
+	margin:2px;
+}
+
+div.upgrade img, div.achievement img{
+	margin:2px;
+}
+
+div#upgrades {
+	margin-left:10px;
+}
+
+div.upgradesNoHover {
+	height:52px;
+	overflow:hidden;
+}
+
+div.upgradesHover {
+	min-height:52px;
+}
+
+div#alles {
+	width:100%;
+	height:100%;
+	position:relative;
+	overflow:hidden;
+}
+
+div.itemKnop {
+	height:75px;
+	width:350px;
+	background-image:url(afbeeldingen/itemknop.png);
+	background-repeat:no-repeat;
+	background-size:100% 100%;
+	position:relative;
+	overflow:hidden;
+	margin-bottom:2px;
+}
+
+div.itemIcon {
+	height:85px;
+	width:85px;
+	background-repeat:no-repeat;
+	background-size:contain;
+	position:absolute;
+	top:5px;
+	left:5px;
+}
+
+div.itemNaam {
+	position:absolute;
+	left:100px;
+	font-size:28px;
+	margin-top:5px;
+}
+
+div.itemPrijs {
+	background-repeat:no-repeat;
+	background-size:100% 100%;
+	width:240px;
+	height:35px;
+	position:relative;
+	left:95px;
+	top:40px;
+}
+
+div.itemPrijsX10 {
+	position: absolute;
+	font-size: 30px;
+	padding: 0;
+	top: 5px;
+	font-weight: bold;
+	left: 20px;
+	display:none;
+}
+
+div.itemPrijsTeWeinig {
+	background-image:url(afbeeldingen/koopknop_grijs.png);
+	cursor: default;
+	pointer-events:none;
+}
+
+div.itemPrijsOK {
+	background-image:url(afbeeldingen/koopknop.png);
+	cursor:pointer;
+}
+
+div.itemPrijsOK:active {
+	background-image:url(afbeeldingen/koopknop_pushed.png);
+	cursor:pointer;
+}
+
+div.itemPrijsIcon {
+	background-image:url(afbeeldingen/pakje_20x20.png);
+	background-repeat:no-repeat;
+	background-size:contain;
+	width:20px;
+	height:20px;
+	position:absolute;
+	left:5px;
+	top:5px;
+}
+
+div.itemPrijsText p {
+	margin:0;
+	margin-left:40px;
+	padding-top:7px;
+	font-size:20px;
+	font-weight:bold;
+	color:white;
+}
+
+div.itemAantal {
+	position:absolute;
+	right:15px;
+	top:0;
+}
+
+div.itemAantal p {
+	font-size:30px;
+	font-weight:bold;
+	font-family:verdana;
+	margin:5px 5px 0px 0px;
+	opacity:0.5;
+}
+
+div#rechts {
+	width:350px;
+	height:100%;
+	background-color:#AB0005;;
+	margin:0;
+	padding:0;
+	right:0px;
+	vertical-align:top;
+	position:absolute;
+	top:0;
+	z-index:50;
+	overflow-y:auto;
+	overflow-x:hidden;
+	-moz-user-select: -moz-none;
+	-khtml-user-select: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+div#center {
+	background-image:url(afbeeldingen/background.jpg);
+	background-position:left top;
+	background-repeat:no-repeat;
+	width:1390px;
+	left:180px;
+	background-color:#B67845;
+	-moz-user-select: -moz-none;
+	-khtml-user-select: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	position:absolute;
+	transform-origin:top left;
+}
+
+div#centerUI {
+	margin:0px 350px 0px 180px;
+	height:100%;
+	-moz-user-select: -moz-none;
+	-khtml-user-select: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	position:relative;
+	pointer-events:none;
+	-moz-user-select: -moz-none;
+	-khtml-user-select: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+div#achtergrond_voor {
+	position:relative;
+	margin:0 auto;
+	height:100%;
+	z-index:20;
+	pointer-events:none;
+}
+
+div#waargeopklikt {
+	background-image:url(afbeeldingen/toymachine_base.png);
+	background-position:top center;
+	background-repeat:no-repeat;
+	margin:0 auto;
+	width:200px;
+	height:150px;
+	position:absolute;
+	top:0px;
+	left:50px;
+	cursor:pointer;
+	z-index:30;
+	pointer-events:auto;
+}
+
+div#toyMachine {
+	background-image:url(afbeeldingen/toymachine_bottom.png);
+	background-repeat:no-repeat;
+	background-size:100% 100%;
+	width:150px;
+	height:51px;
+	position:absolute;
+	left:0;
+	right:0;
+	top:50px;
+	margin:auto;
+	pointer-events:none;
+}
+
+div#voorraad {
+	width:293px;
+	height:123px;
+	background-image:url(afbeeldingen/bordje.png);
+	background-repeat:no-repeat;
+	background-position:top;
+	display:inline-flex;
+	position:absolute;
+	right:50px;
+}
+
+div#links {
+	margin:0;
+	padding:0;
+	width:180px;
+	min-height:850px;
+	height:100%;
+	background-color:#AB0005;;
+	vertical-align:top;
+	position:absolute;
+	z-index:50;
+	overflow:visible;
+}
+
+div#links_border {
+	width:50px;
+	background-image:url(afbeeldingen/zijkant_links.png);
+	background-repeat:repeat-y;
+	background-position:left top;
+	height:100%;
+	float:left;
+	position:relative;
+}
+
+div#rechts_border {
+	width:50px;
+	background-image:url(afbeeldingen/zijkant_rechts.png);
+	background-repeat:repeat-y;
+	background-position:right top;
+	height:100%;
+	float:right;
+	position:relative;
+}
+
+p#total {
+	position:absolute;
+	left:75px;
+	top:22px;
+	font-size:24px;
+	margin:0;
+}
+
+p#rpsTotal {
+	position:absolute;
+	top:48px;
+	left:75px;
+	margin:0;
+}
+
+div#timer {
+	height:120px;
+	width:100px;
+	position:absolute;
+	z-index:55;
+	bottom:0;
+	left:0;
+}
+
+div#timerIcon {
+	background-size:contain;
+	height:100px;
+	width:100px;
+}
+
+div#timerBalk {
+	border:1px solid;
+	background-color:#0F0;
+	width:100px;
+	margin-top:5px;
+	margin-bottom:5px;
+	height:10px;
+}
